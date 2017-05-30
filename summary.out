@@ -1,0 +1,56 @@
+
+ ####################################################################################################
+ #                                                                                                  #
+ #                   Computer programs for analyzing distributions                                  #
+ #                              KAPAKAYALA ANJI BABU                                                #
+ #                                IIT KANPUR, INDIA.                                                #
+ #                                                                                                  #
+ ####################################################################################################
+
+ ===================================================================================
+
+
+ Summary :
+
+
+ Total No of Tosses                    =       10000
+
+ No of heads                           =        5076
+
+ No of tails                           =        4924
+
+ Probability of getting head           =
+ 0.51
+
+ Probability of getting tail           =
+ 0.49
+
+ Total Probability                     =   1.0000000000000000     
+
+ avg value of r                        =  0.50760000000000005     
+
+
+
+ ================================================================================#
+
+ As you see in above results,as  r value becomes larger the probability to get head and tail are equal (50:50) .and by looking at above distribution data we can say that this distribution does not follow Gaussian distribution,it follows uniform distribution.
+
+ ========================================================================================
+ Distribution of data has stored in file called 'histogram.dat'
+ ========================================================================================
+
+
+
+
+
+ Calculation Time (seconds)= 
+ 0.003
+
+
+ Date = 30May17
+
+
+ ================================================================================#
+
+
+ Congratulations ! ...... Program executed successfully

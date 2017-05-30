@@ -1,0 +1,32 @@
+A FORTRAN90 Program to solve below question
+
+1. Computer programs for analyzing distributions (10 points): We discussed the coin toss
+experiment in class. There is an interesting question that we can ask regarding computer al-
+gorithms. Can we have a computer algorithm that produces a random number ? The answer
+to that question is “NO”. The reason is that whatever operation or series of operations the
+computer uses, it will ensure that the number generated is not really random. But there are
+many complicated functions one can use to generate outputs that look completely random. Such
+algorithms are called pseudorandom number generators and they are a part of all major program-
+ming languages these days. Mathematica has a few random number generators like RandomReal,
+RandomInteger, etc. Learn to use these functions and write a simple program to accomplish the
+following:
+(a) Write a program for simulating a coin toss. i.e.the output should be one of two outcomes at
+random, such that, for a large number of trials we get equal amounts of the two outcomes.
+For clarity let the two outcomes be the numbers 0 and 1. You can use the built in random
+number generators of mathematica or any other programming language that you wish to
+use.
+(b) Write a program for generating N coin tosses where N = 4, 10, 20, 100
+N
+(c) Let xi = 1 if heads, and xi = 0 if tails. Calculate the average value of x given by
+ i=1
+ xi /N
+for each of the sets of tosses above.
+(d) Now let N = 4. Generate sets of N random numbers 100 times. Make a frequency chart by
+plotting how many times x lies in the intervals 0 − 0.1, 0.1 − 0.2, .. 0.9 − 1.0. Repeat for
+N = 10, 20, and 100. In each case, take the size of the intervals as 1/N .
+(e) Do you see a peak in the distribution of x as N becomes large ? Does this resemble a
+Gaussian distribution ? Does this follow Central Limit Theorem ?
+In this program you may have to use some control statements like do loops, while statements, if
+statements. Learn these in Mathematica(or any other language) so you can write simple programs
+like this and other problems.
+
