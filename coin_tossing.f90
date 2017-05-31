@@ -1,4 +1,6 @@
-!Fortran forgram for tossing a coin of N trails
+!Fortran forgram for tossing a coin of N trails and It will genarate a Histogram of the data in file.
+!Authour:   ANJI BABU KAPAKAYALA
+!           IIT KANPUR, INDIA
 PROGRAM coin_tossing
    INTEGER :: head,tail,i,N,r,nbin,bin,j
    REAL*8::prob_h,prob_t,avg_r,u,r0,x,rmax,rmin,width
@@ -7,7 +9,7 @@ PROGRAM coin_tossing
    REAL*8 :: start, finish
    CALL cpu_time(start)
    CALL get_DDMonYY(date)
-    PRINT*,"No of tosses ="
+   PRINT*,"No of tosses ="
    READ*,N
 !  PRINT*,"No of tosses given = ",N
    OPEN(1, file = "coin_toss.out")
@@ -18,13 +20,13 @@ PROGRAM coin_tossing
 !========================Histogram input================================================
 !we are generating random numbers from zero to 1 so, rmin=-0.5, rmax=1.5 for our convienence
 
-   rmin=-0.5
+   rmin=-0.5 
    rmax=1.5
    width=0.01
 
-   nbin=nint(((rmax-rmin)/width)) + 1
+   nbin=nint(((rmax-rmin)/width)) + 1     !calculating Number of Bins 
    PRINT*, 'nbin =',nbin
-   ALLOCATE(prob(nbin+1))
+   ALLOCATE(prob(nbin+1))                 
    prob = 0.0
    OPEN(40,file="histogram.dat")
 !==============================writing output into file================================
@@ -46,16 +48,16 @@ PROGRAM coin_tossing
                 prob(bin) = prob(bin) +1.00
               END IF     
 !------------Avarage Value of r---------------!
-           x=x+real(r)        !Sum of all r vaues 
-!          WRITE(20,*)r
+           x=x+real(r)                                      !Sum of all r vaues 
+!          WRITE(*,*)r
         END DO
 
 !--------------------------------
-   avg_r = x/real(N)     !calculating avarage value 
+   avg_r = x/real(N)                                        !calculating avarage value 
 
 
-   prob_h=real(head)/real(N)    !probability of getting head
-   prob_t=real(tail)/real(N)    !probability of getting tail
+   prob_h=real(head)/real(N)                                !probability of getting head
+   prob_t=real(tail)/real(N)                                !probability of getting tail
 
 !===================== writing output into file=========================================================#
 
@@ -74,6 +76,8 @@ PROGRAM coin_tossing
    WRITE(2,*)
    WRITE(2,*)"Summary :"
    WRITE(2,*)
+  ! WRITE(2,11)N
+  ! 11 FORMAT (1X,"Total No. of Tosses =",2X,I7)
    WRITE(2,*)
    WRITE(2,*)"Total No of Tosses                    =",N
    WRITE(2,*)
